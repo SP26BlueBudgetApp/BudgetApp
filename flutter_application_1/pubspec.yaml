@@ -23,3 +23,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  
+  assets:
+    - images/pngtree-bank-icon-png-image_1757496.jpg

@@ -21,6 +21,7 @@ class _SettingScreenState extends State<SettingsScreen> { //settings page
   Widget build(BuildContext context) {
     final auth = AuthService();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white

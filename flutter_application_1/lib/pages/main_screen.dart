@@ -2,16 +2,17 @@ import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/auth.dart';
+import 'package:flutter_application_1/pages/budget_screen.dart';
 import 'package:flutter_application_1/pages/settings_screen.dart';
+import 'package:flutter_application_1/pages/homeOfficial_screen.dart';
 import 'package:flutter_application_1/pages/signup_screen.dart';
-import 'package:flutter_application_1/pages/login_screen.dart';
 import 'package:flutter_application_1/pages/home_screen.dart';
 import 'package:flutter_application_1/pages/signup_screen.dart';
 import 'package:flutter_application_1/widgets/textfield.dart';
 import 'package:flutter_application_1/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-class MainScreen extends StatefulWidget { //Main homepage when in app
+class MainScreen extends StatefulWidget { //Literally JUST THE NAV BAR
   const MainScreen({Key? key}) : super(key: key);
 
   @override
@@ -21,8 +22,8 @@ class MainScreen extends StatefulWidget { //Main homepage when in app
 class _MainScreenState extends State<MainScreen> {
   int myIndex = 0; //settings page
   List<Widget> widgetList = const [
-    HomeScreen(),
-    HomeScreen(),
+    HomeofficialScreen(),
+    BudgetScreen(),
     SettingsScreen(),
   ];
   @override

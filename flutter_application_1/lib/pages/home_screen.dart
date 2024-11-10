@@ -9,7 +9,7 @@ import 'package:flutter_application_1/widgets/textfield.dart';
 import 'package:flutter_application_1/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget { //Intro Screen
+class HomeScreen extends StatelessWidget { //Intro Screen because its bugged
   const HomeScreen({super.key});
 
   @override

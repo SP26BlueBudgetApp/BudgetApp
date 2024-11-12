@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/auth.dart';
 import 'package:flutter_application_1/pages/budget_screen.dart';
+import 'package:flutter_application_1/pages/report_screen.dart';
 import 'package:flutter_application_1/pages/settings_screen.dart';
 import 'package:flutter_application_1/pages/homeOfficial_screen.dart';
 import 'package:flutter_application_1/pages/signup_screen.dart';
@@ -24,6 +25,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> widgetList = const [
     HomeofficialScreen(),
     BudgetScreen(),
+    ReportScreen(),
     SettingsScreen(),
   ];
   @override
@@ -39,15 +41,23 @@ class _MainScreenState extends State<MainScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance),
-            label: 'Home'
+            label: 'Home',
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet),
-            label: 'Budget'
+            label: 'Budget',
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.bar_chart),
+            label: 'Reporting',
+            backgroundColor: Colors.black,
+            ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: 'Settings'
+            label: 'Settings',
+            backgroundColor: Colors.black,
           ),
         ],
         ),

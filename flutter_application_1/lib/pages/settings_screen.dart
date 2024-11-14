@@ -17,6 +17,9 @@ class SettingsScreen extends StatefulWidget {
   }
 
 class _SettingScreenState extends State<SettingsScreen> { //settings page
+  String selectedCurrency = 'USD';
+  String selectedLanguage = 'English';
+  
   @override
   Widget build(BuildContext context) {
     final auth = AuthService();
@@ -104,6 +107,37 @@ class _SettingScreenState extends State<SettingsScreen> { //settings page
                   ),
                 ),
               ),
+              SizedBox(height: 20),
+              SizedBox( // Notification settings
+                child: TextButton.icon(
+                  onPressed: () {
+                
+                  },
+                  icon: const Icon(Icons.money, color: Color.fromARGB(255, 49, 49, 49)),
+                  label: const Text('Currency'),
+                  style: TextButton.styleFrom(
+                    foregroundColor: Color.fromARGB(255, 49, 49, 49), // Text color
+                    textStyle: const TextStyle(
+                      fontSize: 28,
+                      inherit: true,
+                      ),
+                  ),
+                ),
+              ),
+              Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: ['USD', 'EUR', 'GBP', 'CAD']
+                  .map((currency) => ChoiceChip(
+                        label: Text(currency),
+                        selected: selectedCurrency == currency,
+                        onSelected: (selected) {
+                          setState(() {
+                            selectedCurrency = currency;
+                          });
+                        },
+                      ))
+                  .toList(),
+            ),
               SizedBox(height: 40),
               CustomButton( //signout button
                 label: "Sign Out",

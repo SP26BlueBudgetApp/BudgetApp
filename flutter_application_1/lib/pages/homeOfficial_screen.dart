@@ -31,15 +31,79 @@ class _HomeofficialState extends State<HomeofficialScreen> { //settings page
         title: Text("Home"),
         ),
       backgroundColor: Colors.white,
-      body: Align(
-          alignment: Alignment.center,
-          child: Column(
+      body: Column(
             children: [
-              Text("data"),
+              Text(
+                "First Last",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold),
+              ),
+              InkWell(
+                child:
+                    const Text("Edit Profile", style: TextStyle(color: Color.fromARGB(255, 114, 114, 114))),
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Monthly Breakdown",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                height: 75,
+                width: 175,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 143, 143, 143),
+                    ),
+                ),
+                child: Text(
+                  "Total Income\n\$ 5000\n+ 5%",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Container(
+                height: 75,
+                width: 175,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 143, 143, 143),
+                    ),
+                ),
+                child: Text(
+                  "Total Expense\n\$ 3000\n- 3%",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Spending Goals",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                "Recent Transactions",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
         ),
-      ),
     );
   }
 }

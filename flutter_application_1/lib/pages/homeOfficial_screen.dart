@@ -89,7 +89,7 @@ class _HomeofficialState extends State<HomeofficialScreen> { //settings page
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 15),
 
                 //Spending Goals
                 Text(

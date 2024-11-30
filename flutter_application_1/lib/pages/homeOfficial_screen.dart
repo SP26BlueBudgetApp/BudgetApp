@@ -31,77 +31,132 @@ class _HomeofficialState extends State<HomeofficialScreen> { //settings page
         title: Text("Home"),
         ),
       backgroundColor: Colors.white,
-      body: Column(
-            children: [
-              Text(
-                "First Last",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold),
-              ),
-              InkWell(
-                child:
-                    const Text("Edit Profile", style: TextStyle(color: Color.fromARGB(255, 114, 114, 114))),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Monthly Breakdown",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(height: 10),
-              Container(
-                height: 75,
-                width: 175,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color.fromARGB(255, 143, 143, 143),
-                    ),
-                ),
-                child: Text(
-                  "Total Income\n\$ 5000\n+ 5%",
+      body: SingleChildScrollView(
+        child: Column(
+              children: [
+                //Profile Edit
+                Text(
+                  "First Last",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+                ),
+                InkWell(
+                  child:
+                      const Text("Edit Profile", style: TextStyle(color: Color.fromARGB(255, 114, 114, 114))),
+                ),
+                SizedBox(height: 20),
+        
+                //Monthly BReakdown Section
+                Text(
+                  "Monthly Breakdown",
+                  style: TextStyle(
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-              SizedBox(height: 10),
-              Container(
-                height: 75,
-                width: 175,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color.fromARGB(255, 143, 143, 143),
+                SizedBox(height: 10),
+                Container(
+                  height: 75,
+                  width: 175,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 143, 143, 143),
+                      ),
+                  ),
+                  child: Text(
+                    "Total Income\n\$ 5000\n+ 5%",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
                     ),
+                  ),
                 ),
-                child: Text(
-                  "Total Expense\n\$ 3000\n- 3%",
+                SizedBox(height: 10),
+                Container(
+                  height: 75,
+                  width: 175,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 143, 143, 143),
+                      ),
+                  ),
+                  child: Text(
+                    "Total Expense\n\$ 3000\n- 3%",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+
+                //Spending Goals
+                Text(
+                  "Spending Goals",
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Spending Goals",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                Container(
+                  height: 80,
+                  width: 175,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                  ),
+                  child: Text(
+                    "Budget Goals: \$500\nShopping\nclothing\n\$300"
+                  ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "Recent Transactions",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                SizedBox(height: 10),
+                Container(
+                  height: 80,
+                  width: 175,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 0, 0, 0),
+                      ),
+                  ),
+                  child: Text(
+                    "Budget Goals: \$200\nRestaurant\nEating out\n\$150"
+                  ),
                 ),
-              ),
-            ],
+                SizedBox(height: 20),
+
+                //Transactions
+                Text(
+                  "Recent Transactions",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ListTile(
+                  tileColor: Color.fromARGB(255, 238, 238, 238),
+                  title: Text(
+                    "Amazon \$50",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  subtitle: Text(
+                    "Online Shopping"
+                  ),
+                ),
+                SizedBox(height: 5),
+                ListTile(
+                  tileColor: Color.fromARGB(255, 238, 238, 238),
+                  title: Text(
+                    "Food Delivery \$20",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  subtitle: Text(
+                    "Food"
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
     );
